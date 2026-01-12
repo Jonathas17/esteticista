@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estética KarlaLisieux</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo-link">
+    
+  <div class="logo-premium">
+    <span class="logo-top">Estética</span>
+    <span class="logo-bottom">KarlaLisieux</span>
+</div>
+</a>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#services">Serviços</a>
+    <a href="#experts">Equipe</a>
+    <a href="#products">Produtos</a>
+  </nav>
+  <a href="#agendamento" class="btn-header">Agendar</a>
+</header>
+
+<section class="hero-slider">
+
+  <div class="hero-slide active" style="background-image:url('/img/img2.png');">
+    <div class="hero-content">
+      <h1 class="hero-number">01</h1>
+      <p class="hero-subtitle">Conforto & Luxuria</p>
+      <h2 class="hero-title">Serviço Exclusivo<br> Facial</h2>
+      <a href="#" class="hero-btn">Clique aqui</a>
+    </div>
+  </div>
+
+  <div class="hero-slide" style="background-image:url('/img/img5.png');">
+    <div class="hero-content">
+        <h1 class="hero-number">02</h1>
+        <p class="hero-subtitle">Leve Conforto para vida</p>
+        <h2 class="hero-title">Produtos Premiums<br> Tratamentos</h2>
+        <a href="#" class="hero-btn">Clique Aqui</a>
+     </div>
+  </div> <!-- CORRETO -->
+
+  <div class="hero-slide" style="background-image:url('/img/img6.png');">
+    <div class="hero-content">
+      <h1 class="hero-number">03</h1>
+      <p class="hero-subtitle">Limpeza de Pele</p>
+      <h2 class="hero-title">Remoção de Cravos<br> Espinhas</h2>
+      <a href="#" class="hero-btn">Clique aqui</a>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+<!-- FEATURE ICONS -->
+<section class="features">
+  <div>
+    <div class="feature-icon">👩‍⚕️</div>
+    <h3>Equipe profissional</h3>
+    <p>Empregamos esteticistas profissionais.</p>
+  </div>
+  <div>
+    <div class="feature-icon">💎</div>
+    <h3>Produtos Premiums</h3>
+    <p>Usamos apenas os melhores produtos de cuidado com a pele.</p>
+  </div>
+  <div>
+    <div class="feature-icon">🧬</div>
+    <h3>Formação Médica</h3>
+    <p>Todos possuem formação medica.</p>
+  </div>
+  <div>
+    <div class="feature-icon">💺</div>
+    <h3>Melhores equipamentos</h3>
+    <p>Usamos melhores equipamentos profissionais.</p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="padding:3rem 0; background:#fafafa;">
+  <h2 style="text-align:center; font-family:'Playfair Display'; font-size:2rem;">Outros Serviços</h2>
+  <p style="text-align:center; color:var(--muted); max-width:700px; margin:0.5rem auto 2rem;">Presentei-se com um de nossos serviços exclusivos.</p>
+
+  <div class="services-grid">
+    <div class="service-box">
+      <img src="/img/img4.png" alt="Body Treatment"/>
+      <h3>Tratamento de Pele</h3>
+      <p>Tratamentos e cuidado com a pele</p>
+    </div>
+    <div class="service-box">
+      <img src="/img/img3.png" alt="Skin Care"/>
+      <h3>Skin Care</h3>
+      <p>Tratamento com Facial</p>
+    </div>
+    <div class="service-box">
+      <img src="/img/img2.png" alt="Hair Styling"/>
+      <h3>Capilar</h3>
+      <p>Tratamento capilar de alta qualidade</p>
+    </div>
+    <div class="service-box">
+      <img src="/img/img1.png" alt="Pedicure"/>
+      <h3>Acnes & Espinhas</h3>
+      <p>Restaura a Beleza do seu rosto</p>
+    </div>
+  </div>
+</section>
+
+<!-- WELCOME -->
+<section class="welcome">
+  <div>
+    <h2 style="font-family:'Playfair Display';">Bem vindo</h2>
+    <p style="color:var(--muted); line-height:1.7;">Venha conhecer nosso trabalho.</p>
+    <a class="btn-header" href="#">Clique aqui</a>
+  </div>
+
+  <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1200" alt="Welcome image"/>
+</section>
+
+<!-- EXPERTS -->
+<section id="experts" style="padding:3rem 0; background:#fafafa;">
+  <h2 style="text-align:center; font-family:'Playfair Display'; font-size:2rem;">Nossa equipe</h2>
+
+  <div class="experts-grid">
+    <div class="expert">
+      <img src="/img/img7.png" alt="KarlaLisieux"/>
+      <h3>KarlaLisieux</h3>
+      <p>Senior Esthetician</p>
+    </div>
+  </div>
+</section>
+
+<section id="agendamento" class="agendamento-section">
+    <h2>Agendamento</h2>
+
+    <form id="form-agendamento" class="agendamento-form">
+        
+        <!-- Seleção de Serviço -->
+        <label for="servico">Selecione o serviço:</label>
+        <select id="servico" required>
+            <option value="">Escolher...</option>
+            <option value="Limpeza de Pele">Limpeza de Pele</option>
+            <option value="Design de Sobrancelhas">Design de Sobrancelhas</option>
+            <option value="Tratamento Facial Premium">Tratamento Facial Premium</option>
+            <option value="Peeling de Diamante">Peeling de Diamante</option>
+        </select>
+
+        <!-- Data -->
+        <label for="data">Selecione a data:</label>
+        <input type="date" id="data" required>
+
+        <!-- Horário -->
+        <label for="hora">Selecione o horário:</label>
+        <select id="hora" required>
+            <option value="">Escolher...</option>
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+        </select>
+
+        <!-- Nome -->
+        <label for="nome">Seu nome:</label>
+        <input type="text" id="nome" required>
+
+        <!-- Botão -->
+        <button type="submit" class="btn-agendar">Agendar</button>
+    </form>
+</section>
+
+
+<!-- PRODUCTS -->
+<section id="products" class="products">
+  <div>
+    <h2 style="font-family:'Playfair Display';">Produtos usados para tratamento</h2>
+    <p style="color:var(--muted); max-width:450px;">Melhor produto e com a melhor qualidade você só encotra aqui.</p>
+  </div>
+
+  <img src="img/img8.jpg" alt="Products"/>
+</section>
+
+<footer class="footer">
+    <p class="footer-copy">
+        © 2025 <span>Estética KarlaLisieux</span> — Todos os direitos reservados
+    </p>
+
+    <p class="footer-dev">
+        Design: <strong>Jonita</strong> • Desenvolvido por <strong>mim</strong>
+    </p>
+</footer>
+
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+
+function changeSlide() {
+  slides[currentSlide].classList.remove('active');
+
+  currentSlide = (currentSlide + 1) % slides.length;
+
+  slides[currentSlide].classList.add('active');
+}
+
+setInterval(changeSlide, 6000); // 6 segundos por slide
+</script>
+
+<script>
+document.getElementById("form-agendamento").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const servico = document.getElementById("servico").value;
+    const data = document.getElementById("data").value;
+    const hora = document.getElementById("hora").value;
+    const nome = document.getElementById("nome").value;
+
+    const mensagem = 
+`📅 *Novo Agendamento*
+👤 Nome: ${nome}
+💆 Serviço: ${servico}
+📆 Data: ${data}
+⏰ Horário: ${hora}`;
+
+    const numero = "SEU_NUMERO_AQUI";
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+    window.open(url, "_blank");
+});
+</script>
+
+</body>
+</html>
+
+
+</body>
+</html>

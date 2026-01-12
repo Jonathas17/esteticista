@@ -1,0 +1,409 @@
+/* ===========================
+   VARIÁVEIS DE COR PREMIUM
+   =========================== */
+:root {
+  --gold: #C7A55A;           /* Dourado premium */
+  --gold-light: #E3D2A5;     /* Dourado mais suave */
+  --text: #1A1A1A;           /* Preto suave */
+  --muted: #666;             /* Cinza elegante */
+  --bg: #FFFFFF;             /* Fundo branco */
+  --bg-light: #F7F7F7;       /* Fundo sutil para seções */
+  --radius: 18px;            /* Bordas suaves */
+  --transition: .3s ease;    /* Animações suaves */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===========================
+   RESET BÁSICO
+   =========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ===========================
+   CABEÇALHO PREMIUM
+   =========================== */
+header {
+  position: fixed;        /* Fixa o header no topo mesmo ao rolar */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;           /* Mantém sempre na frente do slider */
+  
+  background: #ffffffcc;  /* Barra branca com leve transparência elegante */
+  backdrop-filter: blur(8px); /* Efeito premium vidro fosco */
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 3rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* Força todos os links dentro do hero a NÃO ficarem roxos (link visitado) */
+.hero-content a {
+    color: var(--gold) !important;
+    text-decoration: none !important;
+}
+
+
+/* LOGO */
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);           /* Dourado */
+  letter-spacing: .5px;
+}
+.logo-link {
+    text-decoration: none;
+    color: inherit; /* mantém o dourado e o preto da logo */
+}
+/* MENU */
+nav a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 1.4rem; /* maior */
+    letter-spacing: 0.5px; /* mais elegante */
+    font-family: 'Playfair Display', serif; /* deixa sofisticado */
+}
+
+nav a:hover {
+  color: var(--gold);           /* hover dourado */
+}
+
+/* BOTÃO HEADER */
+.btn-header {
+  display: inline-block;
+  padding: 0.6rem 1.6rem;
+  border-radius: 30px;
+  border: 2px solid var(--gold); 
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+
+.btn-header:hover {
+  background: var(--gold);
+  color: white;
+}
+
+/* ===========================
+   HERO SLIDER (PREMIUM)
+   =========================== */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;                /* Tela inteira */
+  overflow: hidden;
+  pointer-events: none; /* bloqueia interação nos slides invisíveis */
+}
+
+/* SLIDES */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+
+/* SLIDE ATIVO */
+.hero-slide.active {
+  opacity: 1;
+  pointer-events: auto; /* só o slide ativo pode receber hover/click */
+}
+
+/* CONTEÚDO DO SLIDE */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 500px;
+  text-shadow: 0 2px 15px rgba(0,0,0,.4); /* Destaque de luz */
+}
+
+.hero-number {
+  font-size: 6rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+
+.hero-subtitle {
+  margin-top: -15px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  margin: 1rem 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+
+
+/* ===========================
+   FEATURES
+   =========================== */
+.features {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--bg-light);    /* fundo claro elegante */
+}
+
+.features h3 {
+  font-family: 'Playfair Display';
+  margin-top: .5rem;
+  font-size: 1.3rem;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: var(--gold);
+}
+
+/* ===========================
+   SERVICES
+   =========================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 2rem auto;
+}
+
+.service-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;   /* Ajusta imagem exatamente ao quadrado */
+  border-radius: var(--radius);
+}
+
+.service-box h3 {
+  margin-top: .5rem;
+  font-family: 'Playfair Display';
+}
+
+/* ===========================
+   WELCOME SECTION
+   =========================== */
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.welcome img {
+  width: 420px;
+  border-radius: var(--radius);
+}
+
+/* ===========================
+   EQUIPE (CENTRALIZAÇÃO)
+   =========================== */
+.experts-grid {
+  display: flex;
+  justify-content: center;   /* Centraliza os membros */
+  gap: 3rem;
+  margin-top: 2rem;
+  text-align: center; /* centraliza tudo dentro do bloco */
+}
+
+
+
+.expert img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+}
+
+/* ===========================
+   PRODUCTS
+   =========================== */
+.products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 3rem auto;
+}
+
+.products img {
+  width: 320px;
+  border-radius: var(--radius);
+}
+/* container da logo */
+.logo-premium {
+  text-align: center;               /* centraliza tudo */
+  font-family: 'Playfair Display';  /* fonte elegante */
+  line-height: 1.1;                 /* aproxima as duas linhas */
+}
+
+/* parte de cima (Estética) */
+.logo-top {
+  font-size: 1.8rem;                /* tamanho menor */
+  font-style: italic;               /* estilo cursivo premium */
+  color: #1d1d1d;                   /* cor escura elegante */
+  display: block;                   /* força ficar em linha separada */
+}
+
+/* parte de baixo (KarlaLisieux) */
+.logo-bottom {
+  font-size: 2.6rem;                /* maior e destaque */
+  font-weight: 700;                 /* deixa mais forte */
+  font-style: italic;               /* mesmo estilo da referência */
+  display: block;                   /* linha separada */
+  
+  /* efeito dourado premium */
+  background: linear-gradient(90deg, #c9a24a, #f4d87e, #c9a24a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;               /* necessário para o dourado aparecer */
+}
+/* BOTÃO PREMIUM DO SLIDER */
+.hero-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  margin-top: 25px;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  text-decoration: none;
+
+  color: var(--gold);                 /* texto dourado */
+  background: #ffffffcc;              /* branco translúcido premium */
+  border: 2px solid var(--gold);      /* borda dourada */
+  border-radius: 40px;
+
+  backdrop-filter: blur(6px);         /* efeito vidro */
+  transition: 0.35s ease;
+}
+
+/* Remove qualquer comportamento de link padrão */
+.hero-btn:visited {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+/* ANIMAÇÃO PREMIUM AO PASSAR O MOUSE */
+.hero-btn:hover {
+  background: var(--gold);            /* enche de dourado */
+  color: white !important;            /* texto branco */
+  transform: translateY(-3px);        /* leve subida */
+  box-shadow: 0 8px 18px rgba(199,165,90,0.35); /* brilho dourado */
+}
+.agendamento-section {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 30px;
+    background: #ffffffcc;
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    border: 1px solid #e0d8c2;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    font-family: 'Inter', sans-serif;
+}
+
+.agendamento-section h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+.agendamento-form label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 600;
+}
+
+.agendamento-form select,
+.agendamento-form input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #c7a55a;
+    font-size: 1rem;
+}
+
+.btn-agendar {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 40px;
+    border: 2px solid var(--gold);
+    background: #ffffffcc;
+    color: var(--gold);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease;
+    font-family: 'Playfair Display';
+}
+
+.btn-agendar:hover {
+    background: var(--gold);
+    color: white;
+}
+.footer {
+    background: #f7f7f7;
+    padding: 35px 20px;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-copy {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.footer-copy span {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.footer-dev {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.footer-dev strong {
+    color: var(--gold);
+    font-weight: 600;
+}
+#agendamento {
+    scroll-margin-top: 120px; /* ajuste até encaixar perfeitamente */
+}
